@@ -12,3 +12,18 @@ app.get("/", (req, res) => {
   res.send("cloudinary part working there !");
 });
 
+// db connection apply here
+const dbConnection = require("./config/CloudDb");
+dbConnection();
+const fileUpload = require("express-fileupload");
+app.use(fileUpload());
+
+// cloudinary connect
+const cloud = require("./config/CloudinarySiteServer"); 
+  cloud();
+
+// routes apply here 
+const uploadRoutes = require('./routes/route');
+app.use('/upload/routes',uploadRoutes)
+
+
