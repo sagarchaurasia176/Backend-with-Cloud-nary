@@ -19,11 +19,8 @@ const fileUpload = require("express-fileupload");
 app.use(fileUpload());
 
 // cloudinary connect
-const cloud = require("./config/CloudinarySiteServer"); 
-  cloud();
-
-// routes apply here 
-const uploadRoutes = require('./routes/route');
-app.use('/upload/routes',uploadRoutes)
-
-
+const cloudinary = require("./config/CloudinarySiteServer");
+cloudinary()
+// routes apply here
+const uploadRoutes = require("./routes/route");
+app.use("/upload/routes", uploadRoutes);

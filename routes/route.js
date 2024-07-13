@@ -1,13 +1,7 @@
-const express = require('express')
+const express = require("express");
 const routes = express.Router();
-const {ImageController , UploadController , VideoController , localFileUpload} = require('../controller/MainController');
-
+const { FileUploadController } = require("../controller/FileUploadController");
+// ImageController , UploadController , VideoController ,
 // start withe Image controller
-routes.post('/ImageController' , ImageController)
+routes.post("/localFileUpload", FileUploadController);
 module.exports = routes;
-
-
-
-
-
-

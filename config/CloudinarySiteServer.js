@@ -11,7 +11,10 @@ const CloudinarySiteServer = () => {
     });
   } catch (er) {
     console.log("connection not working in cloud part");
+    console.error(er);
   }
 };
 
 module.exports = CloudinarySiteServer;
+
+// BimJQakCRsbNBB8d
