@@ -16,11 +16,16 @@ app.get("/", (req, res) => {
 const dbConnection = require("./config/CloudDb");
 dbConnection();
 const fileUpload = require("express-fileupload");
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 // cloudinary connect
 const cloudinary = require("./config/CloudinarySiteServer");
-cloudinary()
+cloudinary();
 // routes apply here
 const uploadRoutes = require("./routes/route");
 app.use("/upload/routes", uploadRoutes);
