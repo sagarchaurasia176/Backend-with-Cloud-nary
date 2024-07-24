@@ -7,6 +7,9 @@ const localFileUploadSchema = mongoose.Schema({
   ImageUrl: {
     type: String,
   },
+  VideoUrl: {
+    type: String,
+  },
   tags: {
     type: String,
   },
@@ -16,5 +19,5 @@ const localFileUploadSchema = mongoose.Schema({
   },
 });
 
-// exports 
-module.exports = mongoose.model('File' , localFileUploadSchema)
+// exports
+module.exports = mongoose.model("File", localFileUploadSchema);
