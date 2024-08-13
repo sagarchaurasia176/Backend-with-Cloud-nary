@@ -5,11 +5,9 @@ This is the backend project where users can upload their media files to the serv
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS,
-
 **server:** Node Js, Express Js,
 
-**others package** Cloudinary-API,Nodemailer, 
+**others package** Cloudinary 
 
 **DataBase** MongoDB
 
